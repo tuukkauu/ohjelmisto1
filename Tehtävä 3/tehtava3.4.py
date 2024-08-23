@@ -1,6 +1,6 @@
 import math
 
-vuosi = int(input("Kirjoita vuosiluku: "))
+vuosi = int(input("Anna vuosiluku: "))
 
 if vuosi % 4 == 0 and vuosi % 100 != 0:
     print("Antamasi vuosi on karkausvuosi.")
