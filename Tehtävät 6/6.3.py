@@ -1,8 +1,9 @@
 maara = int(input("Syötä luku gallonoissa, saat vastauksen litroina: "))
 
 def muunnin(gallona):
-    bensa = gallona / 3.785
+    bensa = float(gallona) * 3.785
     return bensa
 
-arvo = muunnin(maara)
-print(f"Antamasi luku gallonoissa on {arvo:.2f} litraa.")
+while muunnin(maara) > 0:
+        print(f"Antamasi luku gallonoissa on {muunnin(maara):.3f} litraa.")
+        maara = int(input("Syötä uusi luku gallonoissa: "))
