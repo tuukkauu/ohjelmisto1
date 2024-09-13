@@ -25,5 +25,5 @@ yhteys = mysql.connector.connect(
     collation = "utf8mb4_general_ci",
 )
 
-country_code = input("Enter country code (like FI): ")
+country_code = input("Syötä maatunnus, kuten FI: ")
 all_airport_types_in_count(country_code)
