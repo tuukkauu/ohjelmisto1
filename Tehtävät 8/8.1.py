@@ -2,7 +2,6 @@ import mysql.connector
 
 def lentoasema_nimi_sijainti(ICAO_koodi):
     sql = f"SELECT name, municipality FROM airport WHERE ident = %s"
-    print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql, (ICAO_koodi,))
     tulos = kursori.fetchall()
