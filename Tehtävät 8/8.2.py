@@ -2,7 +2,6 @@ import mysql.connector
 
 def all_airport_types_in_count(code):
     sql = f"SELECT airport.type AS airport_type, COUNT(*) AS count FROM airport JOIN country ON airport.iso_country = country.iso_country WHERE country.iso_country = %s GROUP BY airport.type, country.iso_country"
-    print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql, (code,))
     tulos = kursori.fetchall()
